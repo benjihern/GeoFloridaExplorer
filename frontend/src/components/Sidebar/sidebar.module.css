@@ -1,0 +1,100 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -230px;
+  width: 250px;
+  height: 100%;
+  background-color: #3498db;
+  overflow-x: hidden;
+  transition: left 0.5s ease;
+  padding-top: 60px;
+  z-index: 1;
+}
+
+.sidebar.open {
+  left: 0px;
+}
+
+.sidebar h2 {
+  color: #fff;
+  padding: 10px;
+}
+
+.sidebar label {
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.sidebar input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.subcategories {
+  display: none;
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.categorylist {
+  list-style-type: none;
+  padding: 0;
+}
+
+.category {
+  margin-bottom: 10px;
+}
+
+.category div {
+  padding: 15px 25px;
+  width: 90%;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+}
+
+.category div:hover {
+  background-color: #2980b9;
+  cursor: pointer;
+}
+
+.category div.open {
+  background-color: #2980b9;
+}
+
+.expanded {
+  font-weight: bold;
+}
+
+.show {
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 1vw;
+  height: 1vw;
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
+  transform: rotate(45deg);
+  margin: -10px;
+}
+
+.arrow.flipped {
+  right: 15px;
+}
+
+.arrow.flipped span {
+  transform: rotate(225deg);
+}

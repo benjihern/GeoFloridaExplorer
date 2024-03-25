@@ -1,0 +1,39 @@
+.header {
+  background-color: #00008b;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.container {
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.menu_bar {
+  background-color: #3498db;
+  padding: 10px;
+  border-radius: 5px;
+  width: 36%;
+  margin: 0.5rem auto;
+}
+
+.menu {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 15px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu:hover {
+  background-color: #2980b9;
+}
