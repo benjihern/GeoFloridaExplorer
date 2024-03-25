@@ -1,13 +1,11 @@
-import Sidebar from "./components/Sidebar/sidebar";
 import Header from "./components/Header/header";
-import Map from "./components/Map/map";
+import AppRoutes from "./AppRoutes";
 
 function App() {
   return (
     <>
       <Header />
-      <Sidebar />
-      <Map />
+      <AppRoutes />
     </>
   );
 }

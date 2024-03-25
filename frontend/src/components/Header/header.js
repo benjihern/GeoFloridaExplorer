@@ -13,13 +13,13 @@ export default function Header() {
           <Link className={classes.menu} to="/">
             Home
           </Link>
-          <Link className={classes.menu} to="/">
+          <Link className={classes.menu} to="/about">
             About
           </Link>
-          <Link className={classes.menu} to="/">
+          <Link className={classes.menu} to="/how">
             How to Use
           </Link>
-          <Link className={classes.menu} to="/">
+          <Link className={classes.menu} to="/contact">
             Contact
           </Link>
         </nav>
