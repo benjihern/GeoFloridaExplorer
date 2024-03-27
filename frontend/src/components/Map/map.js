@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet-geosearch/dist/geosearch.css";
+import "/leaflet-control-geocoder/dist/Control.Geocoder.css";
 import { GeoSearchControl, OpenStreetMapProvider } from "leaflet-geosearch";
+import { GeoJSON } from "leaflet";
 import classes from "./map.module.css";
 
 export default function Map() {
