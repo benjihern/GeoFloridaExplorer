@@ -1,9 +1,27 @@
 import React, { useState } from "react";
 import classes from "./sidebar.module.css";
 
-export default function Sidebar() {
+export default function Sidebar({
+  showTrees,
+  toggleTreesVisibility,
+  showPowerLines,
+  togglePower,
+  showTranLines,
+  toggleTran,
+  showParkDist,
+  toggleDist,
+}) {
+  const [searchText, setSearchText] = useState("");
   const [sidebarVisible, setSidebarVisible] = useState(false);
-  const [categoryStates, setCategoryStates] = useState({});
+  const [categoryStates, setCategoryStates] = useState({
+    expandableCategory1: false,
+    expandableCategory2: false,
+    expandableCategory3: false,
+    expandableCategory4: false,
+    expandableCategory5: false,
+    expandableCategory6: false,
+    expandableCategory7: false,
+  });
 
   const toggleSidebar = () => {
     setSidebarVisible(!sidebarVisible);
@@ -16,6 +34,35 @@ export default function Sidebar() {
     });
   };
 
+  /*const handleSearchInputChange = (event) => {
+    setSearchText(event.target.value);
+  };*/
+
+  const getCategoryName = (categoryId) => {
+    switch (categoryId) {
+      case "expandableCategory1":
+        return "Land Use and Land Cover";
+      case "expandableCategory2":
+        return "Vegetation";
+      case "expandableCategory7":
+        return "Other";
+      case "expandableCategory4":
+        return "Supporting Services";
+      case "expandableCategory5":
+        return "Regulating Services";
+      case "expandableCategory3":
+        return "Provisioning Services";
+      case "expandableCategory6":
+        return "Cultural Services";
+      default:
+        return "";
+    }
+  };
+
+  const filteredCategories = Object.keys(categoryStates).filter((categoryId) =>
+    getCategoryName(categoryId).toLowerCase().includes(searchText.toLowerCase())
+  );
+
   return (
     <div className={`${classes.sidebar} ${sidebarVisible ? classes.open : ""}`}>
       <div
@@ -24,87 +71,129 @@ export default function Sidebar() {
       >
         <span></span>
       </div>
-      <h2>Categories</h2>
-      <input type="text" id="searchInput" placeholder="Enter Category" />
+      <h2>Map Filters</h2>
+      {/*<input
+        type="text"
+        id="searchInput"
+        placeholder="Enter Filter"
+        value={searchText}
+        onChange={handleSearchInputChange}
+  />*/}
       <ul className={classes.categorylist}>
-        <li className={classes.category}>
-          <div
-            id="expand-btn"
-            onClick={() => toggleCategory("expandableCategory1")}
-            className={
-              categoryStates["expandableCategory1"] ? classes.expanded : ""
-            }
-          >
-            Expandable Category 1
-          </div>
-          <ul
-            className={`${classes.subcategories} ${
-              categoryStates["expandableCategory1"] ? classes.show : ""
-            }`}
-          >
-            <li>
-              <div>Subcategory 1</div>
-            </li>
-            <li>
-              <div>Subcategory 2</div>
-            </li>
-            <li>
-              <div>Subcategory 3</div>
-            </li>
-          </ul>
-        </li>
-        <li className={classes.category}>
-          <div
-            id="expand-btn"
-            onClick={() => toggleCategory("expandableCategory2")}
-            className={
-              categoryStates["expandableCategory2"] ? classes.expanded : ""
-            }
-          >
-            Expandable Category 2
-          </div>
-          <ul
-            className={`${classes.subcategories} ${
-              categoryStates["expandableCategory2"] ? classes.show : ""
-            }`}
-          >
-            <li>
-              <div>Subcategory 1</div>
-            </li>
-            <li>
-              <div>Subcategory 2</div>
-            </li>
-            <li>
-              <div>Subcategory 3</div>
-            </li>
-          </ul>
-        </li>
-        <li className={classes.category}>
-          <div
-            id="expand-btn"
-            onClick={() => toggleCategory("expandableCategory3")}
-            className={
-              categoryStates["expandableCategory3"] ? classes.expanded : ""
-            }
-          >
-            Expandable Category 3
-          </div>
-          <ul
-            className={`${classes.subcategories} ${
-              categoryStates["expandableCategory3"] ? classes.show : ""
-            }`}
-          >
-            <li>
-              <div>Subcategory 1</div>
-            </li>
-            <li>
-              <div>Subcategory 2</div>
-            </li>
-            <li>
-              <div>Subcategory 3</div>
-            </li>
-          </ul>
-        </li>
+        {filteredCategories.map((categoryId) => (
+          <li key={categoryId} className={classes.category}>
+            <div
+              id="expand-btn"
+              onClick={() => toggleCategory(categoryId)}
+              className={categoryStates[categoryId] ? classes.expanded : ""}
+            >
+              {getCategoryName(categoryId)}
+            </div>
+            <ul
+              className={`${classes.subcategories} ${
+                categoryStates[categoryId] ? classes.show : ""
+              }`}
+            >
+              {categoryId === "expandableCategory1" && (
+                <>
+                  <li>
+                    <div>Lakes</div>
+                  </li>
+                  <li>
+                    <div>Surface Geology</div>
+                  </li>
+                  <li>
+                    <div>Sinkholes</div>
+                  </li>
+                </>
+              )}
+              {categoryId === "expandableCategory2" && (
+                <>
+                  <li>
+                    <div
+                      onClick={toggleTreesVisibility}
+                      className={classes.subcategory}
+                    >
+                      {showTrees
+                        ? "Hide Tree Inventory"
+                        : "Show Tree Inventory"}
+                    </div>
+                  </li>
+                </>
+              )}
+              {categoryId === "expandableCategory4" && (
+                <>
+                  <li>
+                    <div>Nutrient Cycling</div>
+                  </li>
+                  <li>
+                    <div>Soil Formation</div>
+                  </li>
+                </>
+              )}
+              {categoryId === "expandableCategory5" && (
+                <>
+                  <li>
+                    <div>Carbon Storage</div>
+                  </li>
+                  <li>
+                    <div>Pollination</div>
+                  </li>
+                </>
+              )}
+              {categoryId === "expandableCategory3" && (
+                <li>
+                  <div>Livestock Production</div>
+                </li>
+              )}
+              {categoryId === "expandableCategory7" && (
+                <>
+                  <li>
+                    <div onClick={togglePower} className={classes.subcategory}>
+                      {showPowerLines
+                        ? "Hide Power Plants"
+                        : "Show Power Plants"}
+                    </div>
+                  </li>
+                  <li>
+                    <div onClick={toggleTran} className={classes.subcategory}>
+                      {showTranLines
+                        ? "Hide Transmission Lines"
+                        : "Show Transmission Lines"}
+                    </div>
+                  </li>
+                  <li>
+                    <div className={classes.subcategory}>
+                      Solid Waste Facilities
+                    </div>
+                  </li>
+                </>
+              )}
+              {categoryId === "expandableCategory6" && (
+                <>
+                  <li>
+                    <div onClick={togglePower} className={classes.subcategory}>
+                      Trail/Greenways
+                    </div>
+                  </li>
+                  <li>
+                    <div onClick={toggleDist} className={classes.subcategory}>
+                      {showParkDist
+                        ? "Hide State Park Districts"
+                        : "Show State Park Districts"}
+                    </div>
+                  </li>
+                  <li>
+                    <div className={classes.subcategory}>Beach Access</div>
+                  </li>
+                  <li>
+                    <div className={classes.subcategory}>Park Trails</div>
+                  </li>
+                </>
+              )}
+            </ul>
+          </li>
+        ))}
       </ul>
     </div>
   );

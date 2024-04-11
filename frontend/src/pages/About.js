@@ -1,5 +1,10 @@
 import React from "react";
+import GetData from "../data/GetData";
 
 export default function About() {
-  return <div>About</div>;
+  return (
+    <div>
+      <GetData />
+    </div>
+  );
 }

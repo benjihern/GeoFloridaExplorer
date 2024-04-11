@@ -1,0 +1,820 @@
+{
+  "type": "FeatureCollection",
+  "name": "Certified_Power_Plants",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 1,
+        "PLANT_NAME": "Dade County Resource Recovery Facility",
+        "UTILITY_NAME": "Miami-Dade County Public Works (Operator: Covanta Energy)",
+        "SCO_NUMBER": "PA 77-08",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/miami-dade-county-resource-recovery-facility",
+        "COUNTY": "Miami-Dade",
+        "FDEP_DISTRICT": "Southeast",
+        "LAT": 25.836372,
+        "LONG_": -80.356882
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.356884996781787, 25.8363768012374]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2,
+        "PLANT_NAME": "West County Energy Center",
+        "UTILITY_NAME": "Florida Power & Light Company",
+        "SCO_NUMBER": "PA 05-47",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/west-county-energy-center",
+        "COUNTY": "Palm Beach",
+        "FDEP_DISTRICT": "Southeast",
+        "LAT": 26.697662,
+        "LONG_": -80.375065
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.375060025971152, 26.697649467479827]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 3,
+        "PLANT_NAME": "Treasure Coast Energy Center",
+        "UTILITY_NAME": "Florida Municipal Power Agency",
+        "SCO_NUMBER": "PA 05-48",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/treasure-coast-energy-center",
+        "COUNTY": "St. Lucie",
+        "FDEP_DISTRICT": "Southeast",
+        "LAT": 27.384256,
+        "LONG_": -80.377667
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.377846304761206, 27.38404938134299]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 4,
+        "PLANT_NAME": "Turkey Point Power Plant",
+        "UTILITY_NAME": "Florida Power & Light Company",
+        "SCO_NUMBER": "PA 03-45",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/turkey-point-power-plant",
+        "COUNTY": "Miami-Dade",
+        "FDEP_DISTRICT": "Southeast",
+        "LAT": 25.435819,
+        "LONG_": -80.331144
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.33114697762808, 25.435823701893383]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 5,
+        "PLANT_NAME": "St. Lucie Nuclear Plant",
+        "UTILITY_NAME": "Florida Power & Light Company",
+        "SCO_NUMBER": "PA 74-02",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/st-lucie-nuclear-power-plant",
+        "COUNTY": "St. Lucie",
+        "FDEP_DISTRICT": "Southeast",
+        "LAT": 27.348601,
+        "LONG_": -80.246574
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.246577013771969, 27.348606177044882]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 6,
+        "PLANT_NAME": "South Broward Waste-to-Energy Facility",
+        "UTILITY_NAME": "Wheelabrator South Broward, Inc.",
+        "SCO_NUMBER": "PA 85-21",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/south-broward-waste-energy-facility",
+        "COUNTY": "Broward",
+        "FDEP_DISTRICT": "Southeast",
+        "LAT": 26.069123,
+        "LONG_": -80.204066
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.204068959646435, 26.069127863465624]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 7,
+        "PLANT_NAME": "Lauderdale Power Plant",
+        "UTILITY_NAME": "Florida Power & Light Company",
+        "SCO_NUMBER": "PA 89-26",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/lauderdale-power-plant",
+        "COUNTY": "Broward",
+        "FDEP_DISTRICT": "Southeast",
+        "LAT": 26.068055,
+        "LONG_": -80.198324
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.19832695815137, 26.068059863478314]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 8,
+        "PLANT_NAME": "North Broward Waste-to-Energy Facility",
+        "UTILITY_NAME": "Wheelabrator North Broward, Inc.",
+        "SCO_NUMBER": "PA 86-22",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/north-broward-waste-energy-facility",
+        "COUNTY": "Broward",
+        "FDEP_DISTRICT": "Southeast",
+        "LAT": 26.287332,
+        "LONG_": -80.158944
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.158946953249853, 26.287336918362872]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 9,
+        "PLANT_NAME": "Palm Beach County Renewable Energy Park",
+        "UTILITY_NAME": "Solid Waste Authority of Palm Beach County",
+        "SCO_NUMBER": "PA 84-20",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/palm-beach-county-renewable-energy-park",
+        "COUNTY": "Palm Beach",
+        "FDEP_DISTRICT": "Southeast",
+        "LAT": 26.772836,
+        "LONG_": -80.14179
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.141792963973813, 26.772841038988318]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 10,
+        "PLANT_NAME": "Port Everglades Next Generation Clean Energy Center",
+        "UTILITY_NAME": "Florida Power & Light Company",
+        "SCO_NUMBER": "PA 12-57",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/port-everglades-energy-center",
+        "COUNTY": "Broward",
+        "FDEP_DISTRICT": "Southeast",
+        "LAT": 26.085553,
+        "LONG_": -80.125277
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.125279937543553, 26.085557869674272]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 11,
+        "PLANT_NAME": "Tom G. Smith (Lake Worth) Power Plant",
+        "UTILITY_NAME": "City of Lake Worth Utilities",
+        "SCO_NUMBER": "PA 74-05",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/tom-g-smith-power-plant",
+        "COUNTY": "Palm Beach",
+        "FDEP_DISTRICT": "Southeast",
+        "LAT": 26.612499,
+        "LONG_": -80.067776
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.067778937058918, 26.612504001424202]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 12,
+        "PLANT_NAME": "Riviera Beach Energy Center",
+        "UTILITY_NAME": "Florida Power & Light Company",
+        "SCO_NUMBER": "PA 09-54",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/riviera-beach-energy-center",
+        "COUNTY": "Palm Beach",
+        "FDEP_DISTRICT": "Southeast",
+        "LAT": 26.76527,
+        "LONG_": -80.052499
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.052501938520521, 26.765275039178384]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 13,
+        "PLANT_NAME": "Okeechobee Clean Energy Center",
+        "UTILITY_NAME": "Florida Power & Light Company",
+        "SCO_NUMBER": "PA 15-58",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/okeechobee-clean-energy-center",
+        "COUNTY": "Okeechobee",
+        "FDEP_DISTRICT": "Southeast",
+        "LAT": 27.634167,
+        "LONG_": -80.791111
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.791114182060866, 27.634172231221232]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 14,
+        "PLANT_NAME": "Lansing Smith Electric Generating Plant",
+        "UTILITY_NAME": "Gulf Power Corporation",
+        "SCO_NUMBER": "PA 99-40",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/lansing-smith-electric-generating-plant",
+        "COUNTY": "Bay",
+        "FDEP_DISTRICT": "Northwest",
+        "LAT": 30.268971,
+        "LONG_": -85.700006
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-85.700010687547717, 30.268976687609303]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 15,
+        "PLANT_NAME": "Arvah B. Hopkins Generating Station",
+        "UTILITY_NAME": "City of Tallahassee",
+        "SCO_NUMBER": "PA 74-03",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/arvah-b-hopkins-gnerating-station",
+        "COUNTY": "Leon",
+        "FDEP_DISTRICT": "Northwest",
+        "LAT": 30.452218,
+        "LONG_": -84.399461
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-84.399465330026601, 30.452223774750653]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 16,
+        "PLANT_NAME": "Sam O. Purdom Generating Station",
+        "UTILITY_NAME": "City of Tallahassee",
+        "SCO_NUMBER": "PA 97-36",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/sam-o-purdom-generating-station",
+        "COUNTY": "Wakulla",
+        "FDEP_DISTRICT": "Northwest",
+        "LAT": 30.162223,
+        "LONG_": -84.200379
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-84.200383260296647, 30.16222871620926]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 17,
+        "PLANT_NAME": "Pinellas County Resource Recovery Facility",
+        "UTILITY_NAME": "Pinellas County",
+        "SCO_NUMBER": "PA 78-11",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/pinellas-county-resource-recovery-facility",
+        "COUNTY": "Pinellas",
+        "FDEP_DISTRICT": "Southwest",
+        "LAT": 27.873063,
+        "LONG_": -82.673624
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-82.673627731158334, 27.873068234304991]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 18,
+        "PLANT_NAME": "Crystal River Energy Complex",
+        "UTILITY_NAME": "Duke Energy Florida, Inc.",
+        "SCO_NUMBER": "PA 77-09",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/crystal-river-energy-complexcitrus-combined-cycle-plant",
+        "COUNTY": "Citrus",
+        "FDEP_DISTRICT": "Southwest",
+        "LAT": 28.957629,
+        "LONG_": -82.698249
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-82.698252780011089, 28.957634489610346]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 19,
+        "PLANT_NAME": "Levy Nuclear Plant",
+        "UTILITY_NAME": "Duke Energy Florida, Inc.",
+        "SCO_NUMBER": "PA 08-51",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/levy-nuclear-plant",
+        "COUNTY": "Levy",
+        "FDEP_DISTRICT": "Northeast",
+        "LAT": 29.072135,
+        "LONG_": -82.619113
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-82.619116762327693, 29.07214051878778]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 20,
+        "PLANT_NAME": "Pasco County Resource Recovery Facility",
+        "UTILITY_NAME": "Pasco County (Operator: Covanta Energy)",
+        "SCO_NUMBER": "PA 87-23",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/pasco-county-resource-recovery-facility",
+        "COUNTY": "Pasco",
+        "FDEP_DISTRICT": "Southwest",
+        "LAT": 28.368068,
+        "LONG_": -82.558334
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-82.558337717153464, 28.368073355586905]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 21,
+        "PLANT_NAME": "Big Bend Power Station",
+        "UTILITY_NAME": "Tampa Electric Company",
+        "SCO_NUMBER": "PA 79-12",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/big-bend-power-station",
+        "COUNTY": "Hillsborough",
+        "FDEP_DISTRICT": "Southwest",
+        "LAT": 27.794997,
+        "LONG_": -82.402986
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-82.402989650955135, 27.795002223779896]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 22,
+        "PLANT_NAME": "Brooksville South Plant",
+        "UTILITY_NAME": "CEMEX Construction Materials, LLC and Florida Power Development, LLC",
+        "SCO_NUMBER": "PA 82-17",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/brooksville-cemex-plant",
+        "COUNTY": "Hernando",
+        "FDEP_DISTRICT": "Southwest",
+        "LAT": 28.583328,
+        "LONG_": -82.431388
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-82.431391688722002, 28.583333409973832]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 23,
+        "PLANT_NAME": "Deerhaven Generating Station",
+        "UTILITY_NAME": "Gainesville Regional Utilities",
+        "SCO_NUMBER": "PA 74-04",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/deerhaven-generating-station",
+        "COUNTY": "Alachua",
+        "FDEP_DISTRICT": "Northeast",
+        "LAT": 29.758447,
+        "LONG_": -82.387746
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-82.387749724807975, 29.758452685377041]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 24,
+        "PLANT_NAME": "Gainesville Renewable Energy Center",
+        "UTILITY_NAME": "Gainesville Renewable Energy Center, LLC (Subsidiary of American Renewables, LLC)",
+        "SCO_NUMBER": "PA 09-55",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/gainesville-renewable-energy-center",
+        "COUNTY": "Alachua",
+        "FDEP_DISTRICT": "Northeast",
+        "LAT": 29.767656,
+        "LONG_": -82.396543
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-82.396546727643127, 29.767661686876139]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 25,
+        "PLANT_NAME": "Manatee Power Plant",
+        "UTILITY_NAME": "Florida Power & Light Company",
+        "SCO_NUMBER": "PA 02-44",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/manatee-power-plant",
+        "COUNTY": "Manatee",
+        "FDEP_DISTRICT": "Southwest",
+        "LAT": 27.606123,
+        "LONG_": -82.34549
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-82.34549362787034, 27.606128180776359]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 26,
+        "PLANT_NAME": "Hillsborough County Resource Recovery Facility",
+        "UTILITY_NAME": "Hillsborough County (Operator: Covanta Energy)",
+        "SCO_NUMBER": "PA 83-19",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/hillsborough-county-resource-recovery-facility",
+        "COUNTY": "Hillsborough",
+        "FDEP_DISTRICT": "Southwest",
+        "LAT": 27.954452,
+        "LONG_": -82.340473
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-82.340476638502608, 27.954457264192737]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 27,
+        "PLANT_NAME": "Hardee Power Station",
+        "UTILITY_NAME": "Hardee Power Partners, Ltd. (Subsidiary of Invenergy, LLC)",
+        "SCO_NUMBER": "PA 89-25",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/hardee-power-station",
+        "COUNTY": "Hardee",
+        "FDEP_DISTRICT": "Southwest",
+        "LAT": 27.63687,
+        "LONG_": -81.963439
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.963442519197002, 27.636875198653872]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 28,
+        "PLANT_NAME": "Richard J. Midulla Generating Station",
+        "UTILITY_NAME": "Seminole Electric Company, Inc.",
+        "SCO_NUMBER": "PA 89-25SA",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/richard-j-midulla-generating-station",
+        "COUNTY": "Hardee",
+        "FDEP_DISTRICT": "Southwest",
+        "LAT": 27.640551,
+        "LONG_": -81.961713
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.961716519070379, 27.640556199826857]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 29,
+        "PLANT_NAME": "Polk Power Station",
+        "UTILITY_NAME": "Tampa Electric Company",
+        "SCO_NUMBER": "PA 92-32",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/polk-power-station",
+        "COUNTY": "Polk",
+        "FDEP_DISTRICT": "Southwest",
+        "LAT": 27.728612,
+        "LONG_": -81.989713
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.989716529654856, 27.728617220066404]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 30,
+        "PLANT_NAME": "Brandy Branch Generating Station",
+        "UTILITY_NAME": "Jacksonville Electric Authority",
+        "SCO_NUMBER": "PA 00-43",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/brandy-branch-generating-station",
+        "COUNTY": "Duval",
+        "FDEP_DISTRICT": "Northeast",
+        "LAT": 30.320589,
+        "LONG_": -81.948622
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.948625623013257, 30.32059482932689]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 31,
+        "PLANT_NAME": "Hines Energy Complex",
+        "UTILITY_NAME": "Duke Energy Florida, Inc.",
+        "SCO_NUMBER": "PA 92-33",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/hines-energy-complex",
+        "COUNTY": "Polk",
+        "FDEP_DISTRICT": "Southwest",
+        "LAT": 27.789183,
+        "LONG_": -81.870744
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.870747498165628, 27.789188238249814]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 32,
+        "PLANT_NAME": "C.D. McIntosh Power Plant",
+        "UTILITY_NAME": "Lakeland Electric",
+        "SCO_NUMBER": "PA 74-06",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/cd-mcintosh-power-plant",
+        "COUNTY": "Polk",
+        "FDEP_DISTRICT": "Southwest",
+        "LAT": 28.080543,
+        "LONG_": -81.925555
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.925558524715541, 28.080548306330083]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 33,
+        "PLANT_NAME": "Tiger Bay Cogeneration Facility",
+        "UTILITY_NAME": "Duke Energy Florida, Inc.",
+        "SCO_NUMBER": "PA 97-37",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/tiger-bay-cogeneration-facility",
+        "COUNTY": "Polk",
+        "FDEP_DISTRICT": "Southwest",
+        "LAT": 27.746336,
+        "LONG_": -81.84975
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.849753490594594, 27.746341228188054]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 34,
+        "PLANT_NAME": "Osprey Energy Center",
+        "UTILITY_NAME": "Calpine Construction Finance Company, LP",
+        "SCO_NUMBER": "PA 00-41",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/osprey-energy-center",
+        "COUNTY": "Polk",
+        "FDEP_DISTRICT": "Southwest",
+        "LAT": 28.052611,
+        "LONG_": -81.808468
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.80847149031699, 28.052616303027857]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 35,
+        "PLANT_NAME": "Lee County Resource Recovery Facility",
+        "UTILITY_NAME": "Lee County",
+        "SCO_NUMBER": "PA 90-30",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/lee-county-resource-recovery-facility",
+        "COUNTY": "Lee",
+        "FDEP_DISTRICT": "South",
+        "LAT": 26.632005,
+        "LONG_": -81.760554
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.760557426306463, 26.632009960952676]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 36,
+        "PLANT_NAME": "Putnam Power Plant",
+        "UTILITY_NAME": "Florida Power & Light Company",
+        "SCO_NUMBER": "PA 74-01",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/putnam-power-plant",
+        "COUNTY": "Putnam",
+        "FDEP_DISTRICT": "Northeast",
+        "LAT": 29.628307,
+        "LONG_": -81.585398
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.585401488205477, 29.628312680701697]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 37,
+        "PLANT_NAME": "Seminole Generating Station",
+        "UTILITY_NAME": "Seminole Electric Company, Inc.",
+        "SCO_NUMBER": "PA 78-10",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/seminole-generating-station",
+        "COUNTY": "Putnam",
+        "FDEP_DISTRICT": "Northeast",
+        "LAT": 29.733059,
+        "LONG_": -81.632792
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.63279550685489, 29.733064703610363]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 38,
+        "PLANT_NAME": "St. Johns River Power Park",
+        "UTILITY_NAME": "Jacksonville Electric Authority",
+        "SCO_NUMBER": "PA 81-13",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/st-johns-river-power-park",
+        "COUNTY": "Duval",
+        "FDEP_DISTRICT": "Northeast",
+        "LAT": 30.431709,
+        "LONG_": -81.551145
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.551148513614947, 30.431714867961997]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 39,
+        "PLANT_NAME": "Cedar Bay Cogeneration Facility",
+        "UTILITY_NAME": "Cedar Bay Generating Company, LP (Subsidiary of Cogentrix Energy, LLC)",
+        "SCO_NUMBER": "PA 88-24",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/cedar-bay-congeneration-facility",
+        "COUNTY": "Duval",
+        "FDEP_DISTRICT": "Northeast",
+        "LAT": 30.422498,
+        "LONG_": -81.606415
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.606418529348986, 30.422503864442131]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 40,
+        "PLANT_NAME": "Cane Island Power Park",
+        "UTILITY_NAME": "Kissimmee Utility Authority and Florida Municipal Power Agency",
+        "SCO_NUMBER": "PA 98-38",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/cane-island-power-park",
+        "COUNTY": "Osceola",
+        "FDEP_DISTRICT": "Central",
+        "LAT": 28.276155,
+        "LONG_": -81.532867
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.532870419119917, 28.276160364239974]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 41,
+        "PLANT_NAME": "Curtis H. Stanton Energy Center",
+        "UTILITY_NAME": "Orlando Utilities Commission",
+        "SCO_NUMBER": "PA 81-14",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/curtis-h-stanton-energy-center",
+        "COUNTY": "Orange",
+        "FDEP_DISTRICT": "Central",
+        "LAT": 28.483015,
+        "LONG_": -81.166279
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-81.166282321684534, 28.483020424457369]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 42,
+        "PLANT_NAME": "Cape Canaveral Energy Center",
+        "UTILITY_NAME": "Florida Power & Light Company",
+        "SCO_NUMBER": "PA 08-53",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/cape-canaveral-energy-center",
+        "COUNTY": "Brevard",
+        "FDEP_DISTRICT": "Central",
+        "LAT": 28.468787,
+        "LONG_": -80.763963
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.763966204238642, 28.468792433111467]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 43,
+        "PLANT_NAME": "Okeelanta Cogeneration Facility",
+        "UTILITY_NAME": "New Hope Power Partnership",
+        "SCO_NUMBER": "PA 04-46",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/okeelanta-cogeneration-facility",
+        "COUNTY": "Palm Beach",
+        "FDEP_DISTRICT": "Southeast",
+        "LAT": 26.577549,
+        "LONG_": -80.749323
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.749326133695178, 26.577553975346529]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 44,
+        "PLANT_NAME": "Martin Power Plant",
+        "UTILITY_NAME": "Florida Power & Light Company",
+        "SCO_NUMBER": "PA 89-27",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/martin-power-plant",
+        "COUNTY": "Martin",
+        "FDEP_DISTRICT": "Southeast",
+        "LAT": 27.059006,
+        "LONG_": -80.564708
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.564711096034159, 27.05901109786663]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 45,
+        "PLANT_NAME": "Indiantown Cogeneration Plant",
+        "UTILITY_NAME": "Indiantown Cogeneration Company, LP",
+        "SCO_NUMBER": "PA 90-31",
+        "WEBSITE": "https://floridadep.gov/air/siting-coordination-office/content/indiantown-cogeneration-plant",
+        "COUNTY": "Martin",
+        "FDEP_DISTRICT": "Southeast",
+        "LAT": 27.040213,
+        "LONG_": -80.513913
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.513916080971327, 27.04021809507509]
+      }
+    }
+  ]
+}
