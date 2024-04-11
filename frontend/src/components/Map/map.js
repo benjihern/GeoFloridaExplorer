@@ -11,12 +11,14 @@ import treeData from "../../data/TampaTrees/TampaTrees.json";
 import powerData from "../../data/PowerPlants/PowerPlants.json";
 import tranData from "../../data/TranLines/TranLines.json";
 import distData from "../../data/StateParkDist/StateParkDistricts.json";
+import trailData from "../../data/StateParkTrails/StateParkTrails.json";
 
 export default function Map({
   showTrees,
   showPowerLines,
   showTranLines,
   showParkDist,
+  showParkTrails,
 }) {
   useEffect(() => {
     const mapContainer = document.getElementById("map");
@@ -59,6 +61,14 @@ export default function Map({
         }
       }
 
+      function onEachTrail(feature, layer) {
+        if (feature.properties && feature.properties.SITE_NAME) {
+          layer.bindPopup(
+            feature.properties.SITE_NAME + ": " + feature.properties.NAME
+          );
+        }
+      }
+
       function onEachTran(feature, layer) {
         if (
           feature.properties &&
@@ -72,6 +82,13 @@ export default function Map({
           );
         }
       }
+
+      L.geoJSON(trailData.features, {
+        filter: function () {
+          return showParkTrails;
+        },
+        onEachFeature: onEachTrail,
+      }).addTo(map);
 
       L.geoJSON(distData.features, {
         filter: function () {
@@ -163,7 +180,7 @@ export default function Map({
         map.remove();
       };
     }
-  }, [showTrees, showPowerLines, showTranLines, showParkDist]);
+  }, [showTrees, showPowerLines, showTranLines, showParkDist, showParkTrails]);
 
   return <div id="map" className={classes.map}></div>;
 }

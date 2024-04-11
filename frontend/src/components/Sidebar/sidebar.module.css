@@ -17,7 +17,7 @@
 
 .sidebar h2 {
   color: #fff;
-  padding: 10px;
+  padding: 0px 10px;
   margin: 0;
 }
 
@@ -81,6 +81,7 @@
   right: 10px;
   transform: rotate(90deg);
   cursor: pointer;
+  z-index: 2;
 }
 
 .arrow span {

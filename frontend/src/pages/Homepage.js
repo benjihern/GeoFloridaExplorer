@@ -28,6 +28,12 @@ export default function Homepage() {
     setShowParkDist(!showParkDist);
   };
 
+  const [showParkTrails, setShowParkTrails] = useState(false);
+
+  const toggleTrails = () => {
+    setShowParkTrails(!showParkTrails);
+  };
+
   return (
     <div>
       <Sidebar
@@ -39,12 +45,15 @@ export default function Homepage() {
         toggleTran={toggleTran}
         showParkDist={showParkDist}
         toggleDist={toggleDist}
+        showParkTrails={showParkTrails}
+        toggleTrails={toggleTrails}
       />
       <Map
         showTrees={showTrees}
         showPowerLines={showPowerLines}
         showTranLines={showTranLines}
         showParkDist={showParkDist}
+        showParkTrails={showParkTrails}
       />
     </div>
   );

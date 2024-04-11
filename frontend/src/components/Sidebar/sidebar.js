@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./sidebar.module.css";
 
 export default function Sidebar({
@@ -10,6 +10,8 @@ export default function Sidebar({
   toggleTran,
   showParkDist,
   toggleDist,
+  showParkTrails,
+  toggleTrails,
 }) {
   const [searchText, setSearchText] = useState("");
   const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -23,6 +25,21 @@ export default function Sidebar({
     expandableCategory7: false,
   });
 
+  useEffect(() => {
+    if (!sidebarVisible) {
+      // Close all categories when the sidebar is hidden
+      setCategoryStates({
+        expandableCategory1: false,
+        expandableCategory2: false,
+        expandableCategory3: false,
+        expandableCategory4: false,
+        expandableCategory5: false,
+        expandableCategory6: false,
+        expandableCategory7: false,
+      });
+    }
+  }, [sidebarVisible]);
+
   const toggleSidebar = () => {
     setSidebarVisible(!sidebarVisible);
   };
@@ -33,10 +50,6 @@ export default function Sidebar({
       [categoryId]: !categoryStates[categoryId],
     });
   };
-
-  /*const handleSearchInputChange = (event) => {
-    setSearchText(event.target.value);
-  };*/
 
   const getCategoryName = (categoryId) => {
     switch (categoryId) {
@@ -72,13 +85,6 @@ export default function Sidebar({
         <span></span>
       </div>
       <h2>Map Filters</h2>
-      {/*<input
-        type="text"
-        id="searchInput"
-        placeholder="Enter Filter"
-        value={searchText}
-        onChange={handleSearchInputChange}
-  />*/}
       <ul className={classes.categorylist}>
         {filteredCategories.map((categoryId) => (
           <li key={categoryId} className={classes.category}>
@@ -187,7 +193,11 @@ export default function Sidebar({
                     <div className={classes.subcategory}>Beach Access</div>
                   </li>
                   <li>
-                    <div className={classes.subcategory}>Park Trails</div>
+                    <div onClick={toggleTrails} className={classes.subcategory}>
+                      {showParkTrails
+                        ? "Hide State Park Trails"
+                        : "Show State Park Trails"}
+                    </div>
                   </li>
                 </>
               )}
