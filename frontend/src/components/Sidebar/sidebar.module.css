@@ -1,80 +1,95 @@
+/* Sidebar styles */
 .sidebar {
   position: fixed;
   bottom: 0;
-  left: -230px;
+  left: -230px; /* Adjusted for sidebar width */
   width: 250px;
-  height: 637px;
-  background-color: #3498db;
+  height: 621px;
+  background-color: #2c3e50; /* Updated background color */
   overflow-x: hidden;
   transition: left 0.5s ease;
   padding-top: 60px;
   z-index: 1;
 }
 
+/* Open state */
 .sidebar.open {
   left: 0px;
 }
 
+/* Sidebar title styles */
 .sidebar h2 {
   color: #fff;
-  padding: 0px 10px;
+  padding: 10px; /* Adjusted padding */
   margin: 0;
+  text-transform: uppercase; /* Uppercase title text */
 }
 
+/* Label styles */
 .sidebar label {
   color: #fff;
   padding: 10px;
   display: block;
 }
 
+/* Input styles */
 .sidebar input {
-  width: 80%;
+  width: calc(100% - 20px); /* Adjusted width */
   padding: 10px;
   margin: 10px;
 }
 
+/* Subcategories list */
 .subcategories {
   display: none;
   padding-left: 20px;
   list-style-type: none;
 }
 
+/* Category list styles */
 .categorylist {
   list-style-type: none;
   padding: 0;
 }
 
+/* Category styles */
 .category {
   margin-bottom: 10px;
 }
 
+/* Category link styles */
 .category div {
-  padding: 15px 25px;
-  width: 90%;
+  padding: 15px 20px;
+  width: calc(100% - 40px);
   text-decoration: none;
   font-size: 16px;
   color: #fff;
   display: block;
 }
 
+/* Hover effect */
 .category div:hover {
-  background-color: #2980b9;
+  background-color: #34495e;
   cursor: pointer;
   font-weight: bold;
 }
 
+/* Expanded category styles */
 .category div.open {
-  background-color: #2980b9;
+  background-color: #34495e;
 }
 
+/* Expanded text style */
 .expanded {
   font-weight: bold;
 }
 
+/* Display subcategories */
 .show {
   display: block;
 }
 
+/* Styling functionalities for the sidebar arrow */
 .arrow {
   position: absolute;
   top: 15px;

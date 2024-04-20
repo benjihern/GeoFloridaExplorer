@@ -1,39 +1,46 @@
+/* Header styles */
 .header {
-  background-color: #00008b;
+  background-color: #34495e; /* Updated background color to a darker shade */
   color: #fff;
   padding: 20px;
   text-align: center;
-  align-items: center;
 }
 
+/* Centering container */
 .container {
   margin: 0 auto;
-  justify-content: center;
 }
 
+/* Logo styles */
 .logo {
   color: #fff;
   font-size: 2em;
   margin-bottom: 10px;
+  text-transform: uppercase; /* Uppercase logo text */
+  letter-spacing: 2px; /* Adding letter spacing for better readability */
 }
 
+/* Menu bar styles */
 .menu_bar {
-  background-color: #3498db;
+  background-color: #2980b9; /* Changed to a slightly lighter shade */
   padding: 10px;
-  border-radius: 5px;
-  width: 36%;
+  border-radius: 25px; /* Increased border-radius for a smoother look */
+  width: 40%; /* Adjusted width for better responsiveness */
   margin: 0.5rem auto;
 }
 
+/* Menu item styles */
 .menu {
   color: #fff;
   text-decoration: none;
-  padding: 5px 15px;
+  padding: 8px 20px; /* Increased padding for better touch experience */
   margin: 0 10px;
-  border-radius: 5px;
+  border-radius: 25px; /* Increased border-radius for consistency */
   transition: background-color 0.3s ease;
+  display: inline-block; /* Ensuring menu items are inline */
 }
 
+/* Hover effect */
 .menu:hover {
-  background-color: #2980b9;
+  background-color: #2c3e50; /* Darkened hover color */
 }

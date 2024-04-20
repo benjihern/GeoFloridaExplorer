@@ -34,6 +34,12 @@ export default function Homepage() {
     setShowParkTrails(!showParkTrails);
   };
 
+  const [showSolidWaste, setShowSolidWaste] = useState(false);
+
+  const toggleSolidWaste = () => {
+    setShowSolidWaste(!showSolidWaste);
+  };
+
   return (
     <div>
       <Sidebar
@@ -47,6 +53,8 @@ export default function Homepage() {
         toggleDist={toggleDist}
         showParkTrails={showParkTrails}
         toggleTrails={toggleTrails}
+        showSolidWaste={showSolidWaste}
+        toggleSolidWaste={toggleSolidWaste}
       />
       <Map
         showTrees={showTrees}
@@ -54,6 +62,7 @@ export default function Homepage() {
         showTranLines={showTranLines}
         showParkDist={showParkDist}
         showParkTrails={showParkTrails}
+        showSolidWaste={showSolidWaste}
       />
     </div>
   );

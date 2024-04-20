@@ -12,6 +12,7 @@ import powerData from "../../data/PowerPlants/PowerPlants.json";
 import tranData from "../../data/TranLines/TranLines.json";
 import distData from "../../data/StateParkDist/StateParkDistricts.json";
 import trailData from "../../data/StateParkTrails/StateParkTrails.json";
+import wasteData from "../../data/SolidWaste/SolidWasteFacilities.json";
 
 export default function Map({
   showTrees,
@@ -19,6 +20,7 @@ export default function Map({
   showTranLines,
   showParkDist,
   showParkTrails,
+  showSolidWaste,
 }) {
   useEffect(() => {
     const mapContainer = document.getElementById("map");
@@ -69,6 +71,16 @@ export default function Map({
         }
       }
 
+      function onEachWaste(feature, layer) {
+        if (feature.properties && feature.properties.FACILITY_NAME) {
+          layer.bindPopup(
+            feature.properties.FACILITY_NAME +
+              "<br><br> Facility Status: " +
+              feature.properties.FACILITY_STATUS
+          );
+        }
+      }
+
       function onEachTran(feature, layer) {
         if (
           feature.properties &&
@@ -82,6 +94,13 @@ export default function Map({
           );
         }
       }
+
+      L.geoJSON(wasteData.features, {
+        filter: function () {
+          return showSolidWaste;
+        },
+        onEachFeature: onEachWaste,
+      }).addTo(map);
 
       L.geoJSON(trailData.features, {
         filter: function () {
@@ -180,7 +199,14 @@ export default function Map({
         map.remove();
       };
     }
-  }, [showTrees, showPowerLines, showTranLines, showParkDist, showParkTrails]);
+  }, [
+    showTrees,
+    showPowerLines,
+    showTranLines,
+    showParkDist,
+    showParkTrails,
+    showSolidWaste,
+  ]);
 
   return <div id="map" className={classes.map}></div>;
 }

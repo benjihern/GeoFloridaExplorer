@@ -12,7 +12,10 @@ export default function Sidebar({
   toggleDist,
   showParkTrails,
   toggleTrails,
+  showSolidWaste,
+  toggleSolidWaste,
 }) {
+  // Set all the categories to be hidden initially as well as the sidebar
   const [searchText, setSearchText] = useState("");
   const [sidebarVisible, setSidebarVisible] = useState(false);
   const [categoryStates, setCategoryStates] = useState({
@@ -77,6 +80,7 @@ export default function Sidebar({
   );
 
   return (
+    // arrow to toggle sidebar
     <div className={`${classes.sidebar} ${sidebarVisible ? classes.open : ""}`}>
       <div
         className={`${classes.arrow} ${!sidebarVisible ? classes.flipped : ""}`}
@@ -169,8 +173,13 @@ export default function Sidebar({
                     </div>
                   </li>
                   <li>
-                    <div className={classes.subcategory}>
-                      Solid Waste Facilities
+                    <div
+                      onClick={toggleSolidWaste}
+                      className={classes.subcategory}
+                    >
+                      {showSolidWaste
+                        ? "Hide Solid Waste Facilities"
+                        : "Show Solid Waste Facilities"}
                     </div>
                   </li>
                 </>
