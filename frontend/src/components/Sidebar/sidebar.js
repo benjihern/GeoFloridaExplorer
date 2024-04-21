@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import classes from "./sidebar.module.css";
 
 export default function Sidebar({
-  showTrees,
-  toggleTreesVisibility,
+  showNatCollection,
+  toggleNatColVisibility,
   showPowerLines,
   togglePower,
   showTranLines,
@@ -14,8 +14,13 @@ export default function Sidebar({
   toggleTrails,
   showSolidWaste,
   toggleSolidWaste,
+  showLakes,
+  toggleLakes,
+  showSurface,
+  toggleSurface,
 }) {
   // Set all the categories to be hidden initially as well as the sidebar
+
   const [searchText, setSearchText] = useState("");
   const [sidebarVisible, setSidebarVisible] = useState(false);
   const [categoryStates, setCategoryStates] = useState({
@@ -107,10 +112,19 @@ export default function Sidebar({
               {categoryId === "expandableCategory1" && (
                 <>
                   <li>
-                    <div>Lakes</div>
+                    <div onClick={toggleLakes} className={classes.subcategory}>
+                      {showLakes ? "Hide Florida Lakes" : "Show Florida Lakes"}
+                    </div>
                   </li>
                   <li>
-                    <div>Surface Geology</div>
+                    <div
+                      onClick={toggleSurface}
+                      className={classes.subcategory}
+                    >
+                      {showSurface
+                        ? "Hide Surface Geology"
+                        : "Show Surface Geology"}
+                    </div>
                   </li>
                   <li>
                     <div>Sinkholes</div>
@@ -121,12 +135,12 @@ export default function Sidebar({
                 <>
                   <li>
                     <div
-                      onClick={toggleTreesVisibility}
+                      onClick={toggleNatColVisibility}
                       className={classes.subcategory}
                     >
-                      {showTrees
-                        ? "Hide Tree Inventory"
-                        : "Show Tree Inventory"}
+                      {showNatCollection
+                        ? "Hide Natural Collection Areas"
+                        : "Show Natural Collection Areas"}
                     </div>
                   </li>
                 </>
