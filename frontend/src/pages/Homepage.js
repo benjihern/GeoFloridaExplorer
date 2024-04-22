@@ -82,6 +82,26 @@ export default function Homepage() {
 
   // set surface geology states ----------------------------------- //
 
+  // set sinkhole states ------------------------------------------ //
+
+  const [showSinkhole, setShowSinkhole] = useState(false);
+
+  const toggleSinkhole = () => {
+    setShowSinkhole(!showSinkhole);
+  };
+
+  // set sinkhole states ------------------------------------------ //
+
+  // set bridge states -------------------------------------------- //
+
+  const [showBridge, setShowBridge] = useState(false);
+
+  const toggleBridge = () => {
+    setShowBridge(!showBridge);
+  };
+
+  // set bridge states -------------------------------------------- //
+
   return (
     <div>
       <Sidebar
@@ -101,6 +121,10 @@ export default function Homepage() {
         toggleLakes={toggleLakes}
         showSurface={showSurface}
         toggleSurface={toggleSurface}
+        showSinkhole={showSinkhole}
+        toggleSinkhole={toggleSinkhole}
+        showBridge={showBridge}
+        toggleBridge={toggleBridge}
       />
       <Map
         showNatCollection={showNatCollection}
@@ -111,6 +135,8 @@ export default function Homepage() {
         showSolidWaste={showSolidWaste}
         showLakes={showLakes}
         showSurface={showSurface}
+        showSinkhole={showSinkhole}
+        showBridge={showBridge}
       />
     </div>
   );

@@ -18,6 +18,10 @@ export default function Sidebar({
   toggleLakes,
   showSurface,
   toggleSurface,
+  showSinkhole,
+  toggleSinkhole,
+  showBridge,
+  toggleBridge,
 }) {
   // Set all the categories to be hidden initially as well as the sidebar
 
@@ -127,21 +131,24 @@ export default function Sidebar({
                     </div>
                   </li>
                   <li>
-                    <div>Sinkholes</div>
+                    <div
+                      onClick={toggleSinkhole}
+                      className={classes.subcategory}
+                    >
+                      {showSinkhole ? "Hide Sinkholes" : "Show Sinkholes"}
+                    </div>
+                  </li>
+                  <li>
+                    <div onClick={toggleBridge} className={classes.subcategory}>
+                      {showBridge ? "Hide Bridges" : "Show Bridges"}
+                    </div>
                   </li>
                 </>
               )}
               {categoryId === "expandableCategory2" && (
                 <>
                   <li>
-                    <div
-                      onClick={toggleNatColVisibility}
-                      className={classes.subcategory}
-                    >
-                      {showNatCollection
-                        ? "Hide Natural Collection Areas"
-                        : "Show Natural Collection Areas"}
-                    </div>
+                    <div>Tree Inventory</div>
                   </li>
                 </>
               )}
@@ -196,14 +203,22 @@ export default function Sidebar({
                         : "Show Solid Waste Facilities"}
                     </div>
                   </li>
+                  <li>
+                    <div
+                      onClick={toggleNatColVisibility}
+                      className={classes.subcategory}
+                    >
+                      {showNatCollection
+                        ? "Hide Natural Collection Areas"
+                        : "Show Natural Collection Areas"}
+                    </div>
+                  </li>
                 </>
               )}
               {categoryId === "expandableCategory6" && (
                 <>
                   <li>
-                    <div onClick={togglePower} className={classes.subcategory}>
-                      Trail/Greenways
-                    </div>
+                    <div className={classes.subcategory}>Trail/Greenways</div>
                   </li>
                   <li>
                     <div onClick={toggleDist} className={classes.subcategory}>
@@ -221,6 +236,9 @@ export default function Sidebar({
                         ? "Hide State Park Trails"
                         : "Show State Park Trails"}
                     </div>
+                  </li>
+                  <li>
+                    <div>Health Departments</div>
                   </li>
                 </>
               )}

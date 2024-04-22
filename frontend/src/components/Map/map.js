@@ -17,6 +17,8 @@ import trailData from "../../data/StateParkTrails/StateParkTrails.json";
 import wasteData from "../../data/SolidWaste/SolidWasteFacilities.json";
 import lakeData from "../../data/Lakes/FloridaLakes.json";
 import surfaceData from "../../data/SurfaceGeology/SurficialGeology.json";
+import sinkData from "../../data/Sinkholes/FloridaSinkholeTypes.json";
+import bridgeData from "../../data/Bridges/BridgesTDA.json";
 
 export default function Map({
   showNatCollection,
@@ -27,6 +29,8 @@ export default function Map({
   showSolidWaste,
   showLakes,
   showSurface,
+  showSinkhole,
+  showBridge,
 }) {
   useEffect(() => {
     const mapContainer = document.getElementById("map");
@@ -231,18 +235,69 @@ export default function Map({
         }
       }
 
-      var surfaceClusters = L.markerClusterGroup();
-
-      var surfaces = L.geoJSON(surfaceData.features, {
+      L.geoJSON(surfaceData.features, {
         filter: function () {
           return showSurface;
         },
         onEachFeature: onEachSurface,
-      });
-
-      surfaceClusters.addLayer(surfaces).addTo(map);
+      }).addTo(map);
 
       // surface geology functions ------------------------------------------- //
+
+      // sinkhole functions -------------------------------------------------- //
+
+      function onEachSinkhole(feature, layer) {
+        if (feature.properties && feature.properties.AREA_DESC) {
+          layer.bindPopup(
+            feature.properties.AREA_DESC +
+              "<br><brs>Area: " +
+              feature.properties.DEP_SINKHOLE_TYPES_AREA +
+              "<br><brs>Perimiter: " +
+              feature.properties.PERIMETER
+          );
+        }
+      }
+
+      L.geoJSON(sinkData.features, {
+        filter: function () {
+          return showSinkhole;
+        },
+        onEachFeature: onEachSinkhole,
+      }).addTo(map);
+
+      // sinkhole functions -------------------------------------------------- //
+
+      // bridge functions ---------------------------------------------------- //
+
+      function onEachBridge(feature, layer) {
+        if (feature.properties && feature.properties.DISTRICT) {
+          layer.bindPopup(
+            "District: " +
+              feature.properties.DISTRICT +
+              "<br><brs>County: " +
+              feature.properties.COUNTY
+          );
+        }
+      }
+
+      L.geoJSON(bridgeData.features, {
+        pointToLayer: function (feature, latlng) {
+          return L.circleMarker(latlng, {
+            fillColor: "#000",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8,
+            radius: 5,
+          });
+        },
+        filter: function () {
+          return showBridge;
+        },
+        onEachFeature: onEachBridge,
+      }).addTo(map);
+
+      // bridge functions ---------------------------------------------------- //
 
       // map legend control -------------------------------------------------- //
 
@@ -298,6 +353,8 @@ export default function Map({
     showSolidWaste,
     showLakes,
     showSurface,
+    showSinkhole,
+    showBridge,
   ]);
 
   return <div id="map" className={classes.map}></div>;
