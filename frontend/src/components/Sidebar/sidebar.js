@@ -67,8 +67,6 @@ export default function Sidebar({
     switch (categoryId) {
       case "expandableCategory1":
         return "Land Use and Land Cover";
-      case "expandableCategory2":
-        return "Vegetation";
       case "expandableCategory7":
         return "Other";
       case "expandableCategory4":
@@ -113,23 +111,33 @@ export default function Sidebar({
                 categoryStates[categoryId] ? classes.show : ""
               }`}
             >
-              {categoryId === "expandableCategory1" && (
+              {categoryId === "expandableCategory1" && <></>}
+              {categoryId === "expandableCategory6" && (
                 <>
                   <li>
-                    <div onClick={toggleLakes} className={classes.subcategory}>
-                      {showLakes ? "Hide Florida Lakes" : "Show Florida Lakes"}
+                    <div className={classes.subcategory}>Trail/Greenways</div>
+                  </li>
+                  <li>
+                    <div onClick={toggleDist} className={classes.subcategory}>
+                      {showParkDist
+                        ? "Hide State Park Districts"
+                        : "Show State Park Districts"}
                     </div>
                   </li>
                   <li>
-                    <div
-                      onClick={toggleSurface}
-                      className={classes.subcategory}
-                    >
-                      {showSurface
-                        ? "Hide Surface Geology"
-                        : "Show Surface Geology"}
+                    <div>Beach Access</div>
+                  </li>
+                  <li>
+                    <div onClick={toggleTrails} className={classes.subcategory}>
+                      {showParkTrails
+                        ? "Hide State Park Trails"
+                        : "Show State Park Trails"}
                     </div>
                   </li>
+                </>
+              )}
+              {categoryId === "expandableCategory5" && (
+                <>
                   <li>
                     <div
                       onClick={toggleSinkhole}
@@ -138,43 +146,13 @@ export default function Sidebar({
                       {showSinkhole ? "Hide Sinkholes" : "Show Sinkholes"}
                     </div>
                   </li>
-                  <li>
-                    <div onClick={toggleBridge} className={classes.subcategory}>
-                      {showBridge ? "Hide Bridges" : "Show Bridges"}
-                    </div>
-                  </li>
-                </>
-              )}
-              {categoryId === "expandableCategory2" && (
-                <>
-                  <li>
-                    <div>Tree Inventory</div>
-                  </li>
-                </>
-              )}
-              {categoryId === "expandableCategory4" && (
-                <>
-                  <li>
-                    <div>Nutrient Cycling</div>
-                  </li>
-                  <li>
-                    <div>Soil Formation</div>
-                  </li>
-                </>
-              )}
-              {categoryId === "expandableCategory5" && (
-                <>
-                  <li>
-                    <div>Carbon Storage</div>
-                  </li>
-                  <li>
-                    <div>Pollination</div>
-                  </li>
                 </>
               )}
               {categoryId === "expandableCategory3" && (
                 <li>
-                  <div>Livestock Production</div>
+                  <div onClick={toggleLakes} className={classes.subcategory}>
+                    {showLakes ? "Hide Florida Lakes" : "Show Florida Lakes"}
+                  </div>
                 </li>
               )}
               {categoryId === "expandableCategory7" && (
@@ -213,32 +191,36 @@ export default function Sidebar({
                         : "Show Natural Collection Areas"}
                     </div>
                   </li>
-                </>
-              )}
-              {categoryId === "expandableCategory6" && (
-                <>
-                  <li>
-                    <div className={classes.subcategory}>Trail/Greenways</div>
-                  </li>
-                  <li>
-                    <div onClick={toggleDist} className={classes.subcategory}>
-                      {showParkDist
-                        ? "Hide State Park Districts"
-                        : "Show State Park Districts"}
-                    </div>
-                  </li>
-                  <li>
-                    <div className={classes.subcategory}>Beach Access</div>
-                  </li>
-                  <li>
-                    <div onClick={toggleTrails} className={classes.subcategory}>
-                      {showParkTrails
-                        ? "Hide State Park Trails"
-                        : "Show State Park Trails"}
-                    </div>
-                  </li>
                   <li>
                     <div>Health Departments</div>
+                  </li>
+                  <li>
+                    <div onClick={toggleBridge} className={classes.subcategory}>
+                      {showBridge ? "Hide Bridges" : "Show Bridges"}
+                    </div>
+                  </li>
+                </>
+              )}
+              {categoryId === "expandableCategory4" && (
+                <>
+                  <li>
+                    <div>Tree Inventory</div>
+                  </li>
+                  <li>
+                    <div>Soil Formation</div>
+                  </li>
+                  <li>
+                    <div>Rock/Soil</div>
+                  </li>
+                  <li>
+                    <div
+                      onClick={toggleSurface}
+                      className={classes.subcategory}
+                    >
+                      {showSurface
+                        ? "Hide Surface Geology"
+                        : "Show Surface Geology"}
+                    </div>
                   </li>
                 </>
               )}
