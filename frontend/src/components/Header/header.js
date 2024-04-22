@@ -7,7 +7,7 @@ export default function Header() {
     <header className={classes.header}>
       <div className={classes.container}>
         <Link className={classes.logo} to="/">
-          Nature Website
+          GeoFloridaExplorer
         </Link>
         <nav className={classes.menu_bar}>
           <Link className={classes.menu} to="/">
