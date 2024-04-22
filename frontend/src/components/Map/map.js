@@ -19,6 +19,9 @@ import lakeData from "../../data/Lakes/FloridaLakes.json";
 import surfaceData from "../../data/SurfaceGeology/SurficialGeology.json";
 import sinkData from "../../data/Sinkholes/FloridaSinkholeTypes.json";
 import bridgeData from "../../data/Bridges/BridgesTDA.json";
+import treeData from "../../data/TreeInventory/TreeInventory.json";
+import soilData from "../../data/SoilFormation/SoilFormation.json";
+import rockData from "../../data/Rocks/Rock.json";
 
 export default function Map({
   showNatCollection,
@@ -31,6 +34,9 @@ export default function Map({
   showSurface,
   showSinkhole,
   showBridge,
+  showTree,
+  showSoil,
+  showRock,
 }) {
   useEffect(() => {
     const mapContainer = document.getElementById("map");
@@ -299,6 +305,100 @@ export default function Map({
 
       // bridge functions ---------------------------------------------------- //
 
+      // tree functions ------------------------------------------------------ //
+
+      function onEachTree(feature, layer) {
+        if (feature.properties && feature.properties.BOTANICAL) {
+          layer.bindPopup(
+            "Botanical Name: " +
+              feature.properties.BOTANICAL +
+              "<br><br> Common Name: " +
+              feature.properties.COMMON
+          );
+        }
+      }
+
+      var treeClusters = L.markerClusterGroup();
+
+      var trees = L.geoJSON(treeData.features, {
+        pointToLayer: function (feature, latlng) {
+          return L.circleMarker(latlng, {
+            fillColor: "#00FF00",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8,
+            radius: 5,
+          });
+        },
+        filter: function () {
+          return showTree;
+        },
+        onEachFeature: onEachTree,
+      });
+
+      treeClusters.addLayer(trees).addTo(map);
+
+      // tree functions ------------------------------------------------------ //
+
+      // soil functions ------------------------------------------------------ //
+
+      function onEachSoil(feature, layer) {
+        if (feature.properties && feature.properties.SITEID) {
+          layer.bindPopup("Site ID: " + feature.properties.SITEID);
+        }
+      }
+
+      L.geoJSON(soilData.features, {
+        pointToLayer: function (feature, latlng) {
+          return L.circleMarker(latlng, {
+            fillColor: "#964B00",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8,
+            radius: 5,
+          });
+        },
+        filter: function () {
+          return showSoil;
+        },
+        onEachFeature: onEachSoil,
+      }).addTo(map);
+
+      // soil functions ------------------------------------------------------ //
+
+      // rock functions ------------------------------------------------------ //
+
+      function onEachRock(feature, layer) {
+        if (feature.properties && feature.properties.CATEGORY) {
+          layer.bindPopup(feature.properties.CATEGORY);
+        }
+      }
+
+      var rockClusters = L.markerClusterGroup();
+
+      var rocks = L.geoJSON(rockData.features, {
+        pointToLayer: function (feature, latlng) {
+          return L.circleMarker(latlng, {
+            fillColor: "#808080",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8,
+            radius: 5,
+          });
+        },
+        filter: function () {
+          return showRock;
+        },
+        onEachFeature: onEachRock,
+      });
+
+      rockClusters.addLayer(rocks).addTo(map);
+
+      // rock functions ------------------------------------------------------ //
+
       // map legend control -------------------------------------------------- //
 
       L.control
@@ -355,6 +455,9 @@ export default function Map({
     showSurface,
     showSinkhole,
     showBridge,
+    showTree,
+    showSoil,
+    showRock,
   ]);
 
   return <div id="map" className={classes.map}></div>;

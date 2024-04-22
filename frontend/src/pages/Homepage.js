@@ -102,6 +102,36 @@ export default function Homepage() {
 
   // set bridge states -------------------------------------------- //
 
+  // set tree states ---------------------------------------------- //
+
+  const [showTree, setShowTree] = useState(false);
+
+  const toggleTree = () => {
+    setShowTree(!showTree);
+  };
+
+  // set tree states ---------------------------------------------- //
+
+  // set soil states ---------------------------------------------- //
+
+  const [showSoil, setShowSoil] = useState(false);
+
+  const toggleSoil = () => {
+    setShowSoil(!showSoil);
+  };
+
+  // set soil states ---------------------------------------------- //
+
+  // set rock states ---------------------------------------------- //
+
+  const [showRock, setShowRock] = useState(false);
+
+  const toggleRock = () => {
+    setShowRock(!showRock);
+  };
+
+  // set rock states ---------------------------------------------- //
+
   return (
     <div>
       <Sidebar
@@ -125,6 +155,12 @@ export default function Homepage() {
         toggleSinkhole={toggleSinkhole}
         showBridge={showBridge}
         toggleBridge={toggleBridge}
+        showTree={showTree}
+        toggleTree={toggleTree}
+        showSoil={showSoil}
+        toggleSoil={toggleSoil}
+        showRock={showRock}
+        toggleRock={toggleRock}
       />
       <Map
         showNatCollection={showNatCollection}
@@ -137,6 +173,9 @@ export default function Homepage() {
         showSurface={showSurface}
         showSinkhole={showSinkhole}
         showBridge={showBridge}
+        showTree={showTree}
+        showSoil={showSoil}
+        showRock={showRock}
       />
     </div>
   );

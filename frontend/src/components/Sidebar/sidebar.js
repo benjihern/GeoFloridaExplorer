@@ -22,14 +22,18 @@ export default function Sidebar({
   toggleSinkhole,
   showBridge,
   toggleBridge,
+  showTree,
+  toggleTree,
+  showSoil,
+  toggleSoil,
+  showRock,
+  toggleRock,
 }) {
   // Set all the categories to be hidden initially as well as the sidebar
 
   const [searchText, setSearchText] = useState("");
   const [sidebarVisible, setSidebarVisible] = useState(false);
   const [categoryStates, setCategoryStates] = useState({
-    expandableCategory1: false,
-    expandableCategory2: false,
     expandableCategory3: false,
     expandableCategory4: false,
     expandableCategory5: false,
@@ -41,8 +45,6 @@ export default function Sidebar({
     if (!sidebarVisible) {
       // Close all categories when the sidebar is hidden
       setCategoryStates({
-        expandableCategory1: false,
-        expandableCategory2: false,
         expandableCategory3: false,
         expandableCategory4: false,
         expandableCategory5: false,
@@ -65,8 +67,6 @@ export default function Sidebar({
 
   const getCategoryName = (categoryId) => {
     switch (categoryId) {
-      case "expandableCategory1":
-        return "Land Use and Land Cover";
       case "expandableCategory7":
         return "Other";
       case "expandableCategory4":
@@ -111,7 +111,6 @@ export default function Sidebar({
                 categoryStates[categoryId] ? classes.show : ""
               }`}
             >
-              {categoryId === "expandableCategory1" && <></>}
               {categoryId === "expandableCategory6" && (
                 <>
                   <li>
@@ -204,13 +203,21 @@ export default function Sidebar({
               {categoryId === "expandableCategory4" && (
                 <>
                   <li>
-                    <div>Tree Inventory</div>
+                    <div onClick={toggleTree} className={classes.subcategory}>
+                      {showTree ? "Hide Tree Inventory" : "Show Tree Inventory"}
+                    </div>
                   </li>
                   <li>
-                    <div>Soil Formation</div>
+                    <div onClick={toggleSoil} className={classes.subcategory}>
+                      {showSoil ? "Hide Soil Formation" : "Show Soil Formation"}
+                    </div>
                   </li>
                   <li>
-                    <div>Rock/Soil</div>
+                    <div onClick={toggleRock} className={classes.subcategory}>
+                      {showRock
+                        ? "Hide Rock and Sediment Distribution"
+                        : "Show Rock and Sediment Distribution"}
+                    </div>
                   </li>
                   <li>
                     <div
