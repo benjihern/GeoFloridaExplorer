@@ -22,6 +22,8 @@ import bridgeData from "../../data/Bridges/BridgesTDA.json";
 import treeData from "../../data/TreeInventory/TreeInventory.json";
 import soilData from "../../data/SoilFormation/SoilFormation.json";
 import rockData from "../../data/Rocks/Rock.json";
+import greenwayData from "../../data/Greenways/Greenways.json";
+import healthData from "../../data/Health/Health.json";
 
 export default function Map({
   showNatCollection,
@@ -37,6 +39,8 @@ export default function Map({
   showTree,
   showSoil,
   showRock,
+  showGreenway,
+  showHealth,
 }) {
   useEffect(() => {
     const mapContainer = document.getElementById("map");
@@ -399,6 +403,50 @@ export default function Map({
 
       // rock functions ------------------------------------------------------ //
 
+      // greenways functions ------------------------------------------------- //
+
+      function onEachGreenway(feature, layer) {
+        if (feature.properties && feature.properties.NAME) {
+          layer.bindPopup(feature.properties.NAME);
+        }
+      }
+
+      L.geoJSON(greenwayData.features, {
+        filter: function () {
+          return showGreenway;
+        },
+        onEachFeature: onEachGreenway,
+      }).addTo(map);
+
+      // greenways functions ------------------------------------------------- //
+
+      // health functions ---------------------------------------------------- //
+
+      function onEachHealth(feature, layer) {
+        if (feature.properties && feature.properties.Name) {
+          layer.bindPopup(feature.properties.Name);
+        }
+      }
+
+      L.geoJSON(healthData.features, {
+        pointToLayer: function (feature, latlng) {
+          return L.circleMarker(latlng, {
+            fillColor: "#FF0000",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8,
+            radius: 5,
+          });
+        },
+        filter: function () {
+          return showHealth;
+        },
+        onEachFeature: onEachHealth,
+      }).addTo(map);
+
+      // health functions ---------------------------------------------------- //
+
       // map legend control -------------------------------------------------- //
 
       L.control
@@ -458,6 +506,8 @@ export default function Map({
     showTree,
     showSoil,
     showRock,
+    showGreenway,
+    showHealth,
   ]);
 
   return <div id="map" className={classes.map}></div>;

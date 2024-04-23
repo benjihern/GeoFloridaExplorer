@@ -28,6 +28,10 @@ export default function Sidebar({
   toggleSoil,
   showRock,
   toggleRock,
+  showGreenway,
+  toggleGreenway,
+  showHealth,
+  toggleHealth,
 }) {
   // Set all the categories to be hidden initially as well as the sidebar
 
@@ -114,7 +118,14 @@ export default function Sidebar({
               {categoryId === "expandableCategory6" && (
                 <>
                   <li>
-                    <div className={classes.subcategory}>Trail/Greenways</div>
+                    <div
+                      onClick={toggleGreenway}
+                      className={classes.subcategory}
+                    >
+                      {showGreenway
+                        ? "Hide Greenway and Trails"
+                        : "Show Greenway and Trails"}
+                    </div>
                   </li>
                   <li>
                     <div onClick={toggleDist} className={classes.subcategory}>
@@ -191,7 +202,11 @@ export default function Sidebar({
                     </div>
                   </li>
                   <li>
-                    <div>Health Departments</div>
+                    <div onClick={toggleHealth} className={classes.subcategory}>
+                      {showHealth
+                        ? "Hide Health Departments"
+                        : "Show Health Departments"}
+                    </div>
                   </li>
                   <li>
                     <div onClick={toggleBridge} className={classes.subcategory}>

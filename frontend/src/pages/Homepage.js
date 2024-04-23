@@ -132,6 +132,26 @@ export default function Homepage() {
 
   // set rock states ---------------------------------------------- //
 
+  // set greenway states ------------------------------------------ //
+
+  const [showGreenway, setShowGreenway] = useState(false);
+
+  const toggleGreenway = () => {
+    setShowGreenway(!showGreenway);
+  };
+
+  // set greenway states ------------------------------------------ //
+
+  // set health states -------------------------------------------- //
+
+  const [showHealth, setShowHealth] = useState(false);
+
+  const toggleHealth = () => {
+    setShowHealth(!showHealth);
+  };
+
+  // set health states -------------------------------------------- //
+
   return (
     <div>
       <Sidebar
@@ -161,6 +181,10 @@ export default function Homepage() {
         toggleSoil={toggleSoil}
         showRock={showRock}
         toggleRock={toggleRock}
+        showGreenway={showGreenway}
+        toggleGreenway={toggleGreenway}
+        showHealth={showHealth}
+        toggleHealth={toggleHealth}
       />
       <Map
         showNatCollection={showNatCollection}
@@ -176,6 +200,8 @@ export default function Homepage() {
         showTree={showTree}
         showSoil={showSoil}
         showRock={showRock}
+        showGreenway={showGreenway}
+        showHealth={showHealth}
       />
     </div>
   );
